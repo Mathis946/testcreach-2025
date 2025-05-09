@@ -1,0 +1,20 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder", "driverAdapters"]
+  output          = "../../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Response {
+  id        String   @id @default(uuid())
+  answer1   String[]
+  answer2   String
+  answer3   Int
+  answer4   String
+  note      Int
+  createdAt DateTime @default(now())
+}
