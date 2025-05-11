@@ -12,6 +12,7 @@ neonConfig.poolQueryViaFetch = true;
 
 // Type definitions
 declare global {
+  // eslint-disable-next-line no-unused-vars
   var prisma: PrismaClient | undefined;
 }
 
